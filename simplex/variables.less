@@ -13,8 +13,8 @@
 @gray-light:             #808080;
 @gray-lighter:           #ddd;
 
-@brand-primary:         #D9230F;
-@brand-success:         #469408;
+@brand-primary:         #223741;
+@brand-success:         #438004;
 @brand-info:            #029ACF;
 @brand-warning:         #9B479F;
 @brand-danger:          #D9831F;
@@ -25,12 +25,12 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #FCFCFC;
+@body-bg:               #eaeaea;
 //** Global text color on `<body>`.
 @text-color:            @gray;
 
 //** Global textual link color.
-@link-color:            @brand-primary;
+@link-color:            @gray-darker;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 
@@ -49,6 +49,8 @@
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
+@font-weight-base:				600;
+
 @font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
 @font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
 @font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
@@ -63,7 +65,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    @font-family-sans-serif;
-@headings-font-weight:    300;
+@headings-font-weight:    1000;
 @headings-line-height:    1.1;
 @headings-color:          @gray-dark;
 
@@ -139,7 +141,7 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-@btn-font-weight:                normal;
+@btn-font-weight:                @font-weight-base;
 
 @btn-default-color:              #fff;
 @btn-default-bg:                 #474949;
@@ -348,7 +350,7 @@
 
 // Navbar links
 @navbar-default-link-color:                @gray;
-@navbar-default-link-hover-color:          @brand-primary;
+@navbar-default-link-hover-color:          @gray-darker;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         @navbar-default-link-hover-color;
 @navbar-default-link-active-bg:            transparent;
@@ -373,8 +375,8 @@
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 lighten(@brand-primary, 40%);
-@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-color:                 #fff;
+@navbar-inverse-link-hover-color:           lighten(@navbar-inverse-bg, 60%);
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg:             transparent;
@@ -842,5 +844,3 @@
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
-
-
